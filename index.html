@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="EN">
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="GEOS - The future is now!">
+    <meta name="keywords" content="keywords here">
+    <meta name="author" content="Szymon">
+    <link href="https://fonts.googleapis.com/css?family=Press+Start+2P&amp;subset=latin-ext" rel="stylesheet">
+    <title>GEOS 2.0</title>
+    <link rel="stylesheet" href="css/main.css">
+  </head>
+  <body>
+    <!-- MAIN_CONTAINER -->
+    <div class="main_container">
+      <!-- MAIN_BAR & NAV-->
+      <div class="main_bar">
+        <ul class="functions"><span>geos</span>
+          <li class="functions_in hidden geos_info"><span>geos info</span></li>
+          <li class="functions_in hidden desktop_info"><span>desktop info</span></li>
+          <li class="functions_in hidden"><span>select printer</span></li>
+          <li class="functions_in hidden calculator"><span>calculator</span></li>
+          <li class="functions_in hidden notepad"><span>notepad 2.0</span></li>
+        </ul>
+        <ul class="functions"><span>file</span>
+          <li class="functions_in hidden"><span>open</span></li>
+          <li class="functions_in hidden"><span>duplicate</span></li>
+          <li class="functions_in hidden"><span>rename</span></li>
+          <li class="functions_in hidden"><span>info</span></li>
+          <li class="functions_in hidden"><span>print</span></li>
+          <li class="functions_in hidden"><span>delete</span></li>
+          <li class="functions_in hidden"><span>undo delete</span></li>
+        </ul>
+        <ul class="functions"><span>view</span>
+          <li class="functions_in hidden"><span>by icon</span></li>
+          <li class="functions_in hidden"><span>by size</span></li>
+          <li class="functions_in hidden"><span>by type</span></li>
+          <li class="functions_in hidden"><span>by date</span></li>
+          <li class="functions_in hidden"><span>by name</span></li>
+        </ul>
+        <ul class="functions"><span>disc</span>
+          <li class="functions_in hidden"><span>open</span></li>
+          <li class="functions_in hidden"><span>close</span></li>
+          <li class="functions_in hidden"><span>rename</span></li>
+          <li class="functions_in hidden"><span>copy</span></li>
+          <li class="functions_in hidden"><span>validate</span></li>
+          <li class="functions_in hidden"><span>erase</span></li>
+          <li class="functions_in hidden"><span>format</span></li>
+        </ul>
+        <ul class="functions"><span>select</span>
+          <li class="functions_in hidden"><span>all pages</span></li>
+          <li class="functions_in hidden"><span>page file</span></li>
+          <li class="functions_in hidden"><span>border files</span></li>
+        </ul>
+        <ul class="functions"><span>page</span>
+          <li class="functions_in hidden"><span>append</span></li>
+          <li class="functions_in hidden"><span>delete</span></li>
+        </ul>
+        <ul class="functions"><span>options</span>
+          <li class="functions_in hidden"><span>set clock</span></li>
+          <li class="functions_in hidden"><span>RESET</span></li>
+          <li class="functions_in hidden"><span>BASIC</span></li>
+          <li class="functions_in hidden"><span>shortcuts</span></li>
+          <li class="functions_in hidden"><span>BOOT</span></li>
+        </ul>
+        <div class='bar_close'></div>
+        <div class='bar_window'></div>
+        <div class='bar_down'></div>
+        <div class='calendar'></div>
+        <div class="clear"></div>
+      </div>
+      <!-- WINDOWS -->
+      <div id="workspace">
+
+        <div class='geos_info_container draggable hidden'>
+          <div class="bar">
+            <div class='bar_close'></div>
+            <div class='bar_window'></div>
+            <div class='bar_down'></div>
+          </div>
+          <div class="text_area">
+            <span>GEOS designed by:<p>Szymon Mikołajczak.</p><p>Copyright 2017</p><p>CodersLab Softworks ;)</p></span>
+          </div>
+        </div>
+
+        <div class='desktop_info_container draggable hidden'>
+          <div class="bar">
+            <div class='bar_close'></div>
+            <div class='bar_window'></div>
+            <div class='bar_down'></div>
+          </div>
+          <div class="text_area">
+            <span>GEOS Desktop designed by:<p>Szymon Mikołajczak.</p><p>Upgraded to V2.0</p><p>Copyright 2017</p><p>CodersLab Softworks ;)</p></span>
+          </div>
+        </div>
+
+        <div class="calculator_container draggable hidden">
+          <div class="bar">
+            <div class='bar_close'></div>
+            <div class='bar_window'></div>
+            <div class='bar_down'></div>
+          </div>
+          <div class="calc_main">
+            <h4>Calculator</h4>
+            <input id="Result" class="input"></input>
+            <div id="keys">
+               <div id="FirstRow">
+                   <button id="ClearAll" type="reset" value="CE" class="clean calc_button">CE</button>
+                   <button id="Clear" type="reset" value="C" class="clean calc_button">C</button>
+                   <button id="Add" type="button" value="+" class="operators operand calc_button">+</button>
+               </div>
+               <div id="SecondRow">
+                   <button id="One" type="button" value="1" class="Show calc_button">1</button>
+                   <button id="Two" type="button" value="2" class="Show calc_button">2</button>
+                   <button id="Three" type="button" value="3" class="Show calc_button">3</button>
+                   <button id="Sub" type="button" value="-" class="operators operand calc_button">-</button>
+               </div>
+               <div id="ThirdRow">
+                   <button id="Four" type="button" value="4" class="Show calc_button">4</button>
+                   <button id="Five" type="button" value="5" class="Show calc_button">5</button>
+                   <button id="six" type="button" value="6" class="Show calc_button">6</button>
+                   <button id="Mul" type="button" value="*" class="operators operand calc_button">*</button>
+               </div>
+               <div id="FourthRow">
+                   <button id="Seven" type="button" value="7" class="Show calc_button">7</button>
+                   <button id="Eight" type="button" value="8" class="Show calc_button">8</button>
+                   <button id="Nine" type="button" value="9" class="Show calc_button">9</button>
+                   <button id="Divide" type="button" value="/" class="operators operand calc_button">/</button>
+               </div>
+               <div id="FifthRow">
+                   <button id="Zero" type="button" value="0" class="Show calc_button">0</button>
+                   <button id="Dot" type="button" value="." class="Show calc_button">.</button>
+                   <button id="Calculate" type="button" value="=" class="operand calc_button">=</button>
+               </div>
+            </div>
+          </div>
+        </div>
+
+        <div class='notepad_container draggable hidden'>
+          <div class="bar">
+            <div class='bar_close'></div>
+            <div class='bar_window'></div>
+            <div class='bar_down'></div>
+          </div>
+          <div class="textarea_container">
+            <textarea name="notepad" rows="20" cols="37"></textarea>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+    <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/themes/smoothness/jquery-ui.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
+    <script src="js/app.js" type="text/javascript"></script>
+  </body>
+</html>
