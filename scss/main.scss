@@ -37,24 +37,54 @@ input {
 
 .main_container {
   border: 3px solid $dark-grey;
-  width: 1600px;
-  height: 900px;
+  width: 99vw;
+  height: 96vh;
   background-image: url("../images/background.gif");
-  margin-top: 1vh;
+  margin-top: 10px;
 }
 
 #workspace {
-  width: 1580px;
-  height: 870px;
+  width: 97vw;
+  height: 94vh;
   display: flex;
-  flex-wrap: wrap;
+  justify-content: flex-start;
+  align-content: flex-start;
 }
 
 .hidden {
   display: none;
 }
 
+.highest_top {
+  z-index: 200!important;
+  position: relative
+}
+
+.top {
+  z-index: 100!important;
+  position: relative
+}
+
+.bottom {
+  z-index: 10!important;
+  position: relative
+}
+
 /*MIXINS-----------------------------------------------------------------*/
+
+@mixin for-size($size) {
+  @if $size == phone-only {
+    @media (max-width: 599px) { @content; }
+  } @else if $size == tablet-portrait-up {
+    @media (min-width: 600px) { @content; }
+  } @else if $size == tablet-landscape-up {
+    @media (min-width: 900px) { @content; }
+  } @else if $size == desktop-up {
+    @media (min-width: 1200px) { @content; }
+  } @else if $size == big-desktop-up {
+    @media (min-width: 1800px) { @content; }
+  }
+}
 
 @mixin clearfix {
   &:before,
@@ -92,6 +122,7 @@ input {
 @mixin window {
   background-color: $light-grey;
   color: $dark-grey;
+  position: absolute;
   @include box-shadow (12px);
 }
 
@@ -138,7 +169,7 @@ input {
   color: $dark-grey;
   float: right;
   background-color: $light-grey;
-  width: 270px;
+  width: 310px;
   height: 18px;
   border: 3px solid $dark-grey;
 }
@@ -169,16 +200,22 @@ input {
 
 /*WINDOWS----------------------------------------------------------------*/
 
+.geos_welcome_container {
+  @include window;
+  width: 455px;
+  height: 130px;
+}
+
 .geos_info_container {
   @include window;
   width: 420px;
-  height: 120px;
+  height: 155px;
 }
 
 .desktop_info_container {
   @include window;
   width: 420px;
-  height: 150px;
+  height: 175px;
 }
 
 .calculator_container {
@@ -234,7 +271,7 @@ text-align: left;
   @include dark_hover;
 }
 
-.button2 {
-  @include buttons_choose;
-  @include dark_hover;
+/*OTHER----------------------------------------------------*/
+#Result {
+  @include box_shadow (3px);
 }

@@ -19,7 +19,6 @@
         <ul class="functions"><span>geos</span>
           <li class="functions_in hidden geos_info"><span>geos info</span></li>
           <li class="functions_in hidden desktop_info"><span>desktop info</span></li>
-          <li class="functions_in hidden"><span>select printer</span></li>
           <li class="functions_in hidden calculator"><span>calculator</span></li>
           <li class="functions_in hidden notepad"><span>notepad 2.0</span></li>
         </ul>
@@ -59,7 +58,7 @@
         </ul>
         <ul class="functions"><span>options</span>
           <li class="functions_in hidden"><span>set clock</span></li>
-          <li class="functions_in hidden"><span>RESET</span></li>
+          <li class="functions_in hidden reset"><span>RESET</span></li>
           <li class="functions_in hidden"><span>BASIC</span></li>
           <li class="functions_in hidden"><span>shortcuts</span></li>
           <li class="functions_in hidden"><span>BOOT</span></li>
@@ -73,6 +72,18 @@
       <!-- WINDOWS -->
       <div id="workspace">
 
+        <div class='geos_welcome_container draggable'>
+          <div class="bar">
+            <div class='bar_close'></div>
+            <div class='bar_window'></div>
+            <div class='bar_down'></div>
+          </div>
+          <div class="text_area">
+            <span>Welcome to GEOS v2.0<p>Caution - low functionality!</p><p>Project still in progress!!!</p></span>
+            <button class="button1 geos_welcome_container_button">OK</button>
+          </div>
+        </div>
+
         <div class='geos_info_container draggable hidden'>
           <div class="bar">
             <div class='bar_close'></div>
@@ -81,6 +92,7 @@
           </div>
           <div class="text_area">
             <span>GEOS designed by:<p>Szymon Mikołajczak.</p><p>Copyright 2017</p><p>CodersLab Softworks ;)</p></span>
+            <button class="button1 geos_info_container_button">OK</button>
           </div>
         </div>
 
@@ -92,6 +104,7 @@
           </div>
           <div class="text_area">
             <span>GEOS Desktop designed by:<p>Szymon Mikołajczak.</p><p>Upgraded to V2.0</p><p>Copyright 2017</p><p>CodersLab Softworks ;)</p></span>
+            <button class="button1 desktop_info_container_button">OK</button>
           </div>
         </div>
 
@@ -102,7 +115,7 @@
             <div class='bar_down'></div>
           </div>
           <div class="calc_main">
-            <h4>Calculator</h4>
+            <h5>Calculator</h5>
             <input id="Result" class="input"></input>
             <div id="keys">
                <div id="FirstRow">
@@ -111,9 +124,9 @@
                    <button id="Add" type="button" value="+" class="operators operand calc_button">+</button>
                </div>
                <div id="SecondRow">
-                   <button id="One" type="button" value="1" class="Show calc_button">1</button>
-                   <button id="Two" type="button" value="2" class="Show calc_button">2</button>
-                   <button id="Three" type="button" value="3" class="Show calc_button">3</button>
+                   <button id="Seven" type="button" value="7" class="Show calc_button">7</button>
+                   <button id="Eight" type="button" value="8" class="Show calc_button">8</button>
+                   <button id="Nine" type="button" value="9" class="Show calc_button">9</button>
                    <button id="Sub" type="button" value="-" class="operators operand calc_button">-</button>
                </div>
                <div id="ThirdRow">
@@ -123,9 +136,9 @@
                    <button id="Mul" type="button" value="*" class="operators operand calc_button">*</button>
                </div>
                <div id="FourthRow">
-                   <button id="Seven" type="button" value="7" class="Show calc_button">7</button>
-                   <button id="Eight" type="button" value="8" class="Show calc_button">8</button>
-                   <button id="Nine" type="button" value="9" class="Show calc_button">9</button>
+                   <button id="One" type="button" value="1" class="Show calc_button">1</button>
+                   <button id="Two" type="button" value="2" class="Show calc_button">2</button>
+                   <button id="Three" type="button" value="3" class="Show calc_button">3</button>
                    <button id="Divide" type="button" value="/" class="operators operand calc_button">/</button>
                </div>
                <div id="FifthRow">
@@ -143,12 +156,14 @@
             <div class='bar_window'></div>
             <div class='bar_down'></div>
           </div>
+          <h5>Notepad 2.0</h5>
           <div class="textarea_container">
             <textarea name="notepad" rows="20" cols="37"></textarea>
           </div>
         </div>
 
       </div>
+      
     </div>
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
