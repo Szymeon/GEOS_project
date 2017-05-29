@@ -58,7 +58,7 @@ function dropdownMenu() {
        })
 }
 
-//DRAGGABLE WINDOWS--------------------------------------------------------
+//DRAGGABLE WINDOWS & ICONS--------------------------------------------------------
 
 $('.draggable').draggable({
     grid: [ 20, 20 ], stack: 'div', containment: $(this).parent()
@@ -68,6 +68,11 @@ $('.draggable').on('click', function(event) {
     $(this).addClass('top').removeClass('bottom');
     $(this).siblings().removeClass('top').addClass('bottom');
 });
+
+$('.ico').draggable({
+    grid: [ 40, 40 ], stack: 'div', containment: $(this).parent()
+});
+
       //DRAGGABLE POSITION
 $('.draggable').position({
   my: 'center',
@@ -148,16 +153,16 @@ $(".clean").click(function () {
     $('.input').val("");
 });
 
-$(".Show").click(function () {
-    var EText = $('#Result').val();
-    if (EText != "0") {
-        var val1 = EText;
-        var ButtonVal = $(this);
-        var val2 = ButtonVal.text();
-        var Res = val1 + val2;
-        $('#Result').val(Res);
+$(".show").click(function () {
+    var eText = $('#result').val();
+    if (eText != "0") {
+        var val1 = eText;
+        var buttonVal = $(this);
+        var val2 = buttonVal.text();
+        var res = val1 + val2;
+        $('#result').val(res);
     } else {
-        $('#Result').val();
+        $('#result').val();
     }
 });
 
@@ -165,7 +170,7 @@ $(function (e) {
     var interRes = null;
     var operator;
     $('.operators').click(function (e) {
-        var value1 = $('#Result').val();
+        var value1 = $('#result').val();
         if (interRes != null) {
             var result = ApplyOperation(interRes, value1, operator);
             interRes = result;
@@ -175,11 +180,11 @@ $(function (e) {
         operator = $(this).text();
         $('input').val("");
     });
-    $('#Result').keypress(function (e) {
+    $('#result').keypress(function (e) {
         if ((e.keyCode == 61)) {
             var op = operator;
             var res;
-            var value2 = $('#Result').val();
+            var value2 = $('#result').val();
             if ((value2 != "")) {
                 var data = value2.split("+");
                 if (data.length > 2) res = ApplyOperation(interRes, data[data.length - 1], op);
@@ -187,10 +192,10 @@ $(function (e) {
             } else {
                 res = interRes;
             }
-            $('#Result').val(res);
+            $('#result').val(res);
             interRes = null;
         } else if ((e.keyCode == 43) || (e.keyCode == 45) || (e.keyCode == 42) || (e.keyCode == 47)) {
-            var value1 = $('#Result').val();
+            var value1 = $('#result').val();
             var inter = (interRes != null);
             if (inter) {
                 var op = operator;
@@ -211,16 +216,16 @@ $(function (e) {
             $('.input').text("");
         }
     });
-    $('#Calculate').click(function (e) {
+    $('#calculate').click(function (e) {
         var op = operator;
         var res;
-        var value2 = $('#Result').val();
+        var value2 = $('#result').val();
         if ((value2 != "")) {
             res = ApplyOperation(interRes, value2, op);
         } else {
             res = interRes;
         }
-        $('#Result').val(res);
+        $('#result').val(res);
         interRes = null;
     });
 });

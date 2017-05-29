@@ -126,6 +126,12 @@ input {
   @include box-shadow (12px);
 }
 
+@mixin icons {
+  width: 48px;
+  height: 42px;
+  margin-top: 2.5vh;
+}
+
 /*MAIN_CONTAINER_UPPER_BAR-----------------------------------------------*/
 
 .main_bar {
@@ -271,7 +277,20 @@ text-align: left;
   @include dark_hover;
 }
 
+/*ICONS-----------------------------------------------------*/
+
+.ico{
+  @include icons;
+}
+
 /*OTHER----------------------------------------------------*/
+
+.icons_basic_container {
+  margin-top: 40vw;
+  width: 97vw;
+  height: 5vh;
+}
+
 #Result {
   @include box_shadow (3px);
 }
